@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Светоматериал</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-card {
+            background: #1a1a1a;
+            padding: 35px 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(230,184,0,0.08);
+            transition: 0.4s ease;
+            height: 100%;
+            text-align: center;
+        }
+        .contact-card:hover {
+            border-color: rgba(230,184,0,0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .contact-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .contact-card:hover .icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+        .contact-card h3 {
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .contact-card a {
+            color: #CCCCCC;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 16px;
+            display: inline-block;
+            word-break: break-word;
+        }
+        .contact-card a:hover {
+            color: #E6B800;
+        }
+        .contact-card .label {
+            color: #888;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-card {
+            background: #1a1a1a;
+            padding: 40px 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(230,184,0,0.08);
+        }
+        .form-card h3 {
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .form-card .sub {
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .form-card .sub span {
+            color: #E6B800;
+        }
+        .success-message {
+            display: none;
+            background: rgba(46, 204, 113, 0.15);
+            border: 1px solid #2ecc71;
+            color: #2ecc71;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .success-message.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        .info-block {
+            background: #1a1a1a;
+            padding: 35px 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(230,184,0,0.08);
+            text-align: center;
+            transition: 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .info-block:hover {
+            border-color: rgba(230,184,0,0.3);
+        }
+        .info-block .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .info-block .title {
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .info-block .address {
+            color: #CCCCCC;
+            font-size: 16px;
+        }
+        .info-block .work-time {
+            color: #888;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .info-block .divider {
+            width: 40px;
+            height: 2px;
+            background: #E6B800;
+            margin: 15px auto;
+        }
+        @media (max-width: 768px) {
+            .contact-card .icon {
+                font-size: 32px;
+            }
+            .form-card {
+                padding: 25px 20px;
+            }
+            .grid-4 {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .grid-4 {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">✦ Светоматериал</a>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="products/facade.html">Продукты</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="process.html">Как мы работаем</a>
+                <a href="contacts.html" class="active">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <section style="padding-top:120px; padding-bottom:60px;">
+        <div class="container">
+            <h1 class="section-title">Обсудить <span>проект</span></h1>
+            <p class="section-subtitle">Мы отвечаем в течение 2 часов</p>
+
+            <!-- Контакты (3 карточки) -->
+            <div class="grid-4" style="margin-bottom: 50px; grid-template-columns: repeat(3, 1fr);">
+                <div class="contact-card">
+                    <div class="icon">📞</div>
+                    <h3>Телефон</h3>
+                    <span class="label">Позвоните нам</span>
+                    <a href="tel:+79101241230">+7 (910) 124-12-30</a>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">✉️</div>
+                    <h3>Email</h3>
+                    <span class="label">Напишите нам</span>
+                    <a href="mailto:eli2009@yandex.ru">eli2009@yandex.ru</a>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">📱</div>
+                    <h3>Telegram</h3>
+                    <span class="label">Мессенджер</span>
+                    <a href="https://t.me/tvelingram" target="_blank">@tvelingram</a>
+                </div>
+            </div>
+
+            <div class="grid-2" style="align-items: stretch;">
+                <!-- Форма -->
+                <div class="form-card">
+                    <h3>Напишите нам</h3>
+                    <p class="sub">Заполните форму — мы <span>свяжемся</span> с вами в ближайшее время</p>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Ваше имя *</label>
+                            <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+                        </div>
+                        <div class="form-group">
+                            <label>Телефон *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (910) 124-12-30">
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="eli2009@yandex.ru">
+                        </div>
+                        <div class="form-group">
+                            <label>Сообщение *</label>
+                            <textarea id="message" name="message" required placeholder="Расскажите о вашем проекте..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-gold" style="width:100%;" id="submitBtn">Отправить</button>
+                        <div class="success-message" id="successMessage">
+                            ✅ Заявка отправлена! Мы свяжемся с вами в течение 2 часов.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Инфо-блок -->
+                <div>
+                    <div class="info-block">
+                        <div class="icon">📍</div>
+                        <div class="title">Наш адрес</div>
+                        <div class="divider"></div>
+                        <div class="address">Москва, ул. Архитектурная, 15</div>
+                        <div class="work-time">🕐 Пн–Пт: 10:00 – 20:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ФУТЕР (горизонтальный, без соцсетей) -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4 style="color:#E6B800;">✦ Светоматериал</h4>
+                <p>Интеграция света в архитектуру.<br>Превращаем статичные формы в живую среду.</p>
+            </div>
+            <div>
+                <h4>Навигация</h4>
+                <a href="about.html">О нас</a>
+                <a href="products/facade.html">Продукты</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <a href="tel:+79101241230">📞 +7 (910) 124-12-30</a>
+                <a href="mailto:eli2009@yandex.ru">✉️ eli2009@yandex.ru</a>
+                <a href="https://t.me/tvelingram" target="_blank">📱 @tvelingram</a>
+                <span class="address">📍 Москва, ул. Архитектурная, 15</span>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Светоматериал. Все права защищены.</div>
+    </div>
+</footer>
+                    <a href="products/facade.html">Продукты</a>
+
+    <script>
+        // === HEADER SCROLL ===
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // === ОТПРАВКА В TELEGRAM ===
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const submitBtn = document.getElementById('submitBtn');
+            const successMsg = document.getElementById('successMessage');
+
+            const BOT_TOKEN = '8780036625:AAHJwO9YfhOuJoBqc7Kk1ZKMAD93kkiWtDE';
+            const CHAT_ID = '1763715812';
+
+            const text = `📩 НОВАЯ ЗАЯВКА!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n✉️ Email: ${email}\n💬 Сообщение: ${message}`;
+
+            submitBtn.textContent = 'Отправка...';
+            submitBtn.disabled = true;
+
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        successMsg.classList.add('show');
+                        document.getElementById('contactForm').reset();
+                        submitBtn.textContent = '✅ Отправлено!';
+                        setTimeout(() => {
+                            submitBtn.textContent = 'Отправить';
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    } else {
+                        alert('❌ Ошибка: ' + data.description);
+                        submitBtn.textContent = 'Отправить';
+                        submitBtn.disabled = false;
+                    }
+                })
+                .catch(error => {
+                    alert('❌ Ошибка соединения. Проверьте интернет.');
+                    submitBtn.textContent = 'Отправить';
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+
+</body>
+</html>

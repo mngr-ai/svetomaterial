@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Светоматериал | Архитектурный свет</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Hero с градиентом и анимацией */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(230,184,0,0.05), transparent 70%);
+            animation: rotateBackground 40s linear infinite;
+        }
+        @keyframes rotateBackground {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 58px;
+            font-weight: 300;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            position: relative;
+            animation: slideDown 1s ease-out;
+        }
+        .hero h1 span {
+            color: #E6B800;
+            font-weight: 700;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero p {
+            font-size: 22px;
+            color: #CCCCCC;
+            margin-bottom: 30px;
+            position: relative;
+            animation: fadeIn 1.2s ease-out;
+        }
+        .hero .btn-gold {
+            animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Стрелка вниз */
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #E6B800;
+            font-size: 30px;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* Карусель */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .carousel-slide {
+            min-width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+            border: 1px solid rgba(230,184,0,0.05);
+            font-size: 20px;
+            color: #666;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .carousel-slide .icon {
+            font-size: 60px;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 24px;
+            transition: 0.3s;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        .carousel-btn:hover {
+            background: rgba(230,184,0,0.8);
+        }
+        .carousel-btn.prev {
+            left: 20px;
+        }
+        .carousel-btn.next {
+            right: 20px;
+        }
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        .carousel-dots button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            background: #333;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .carousel-dots button.active {
+            background: #E6B800;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .carousel-slide {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">✦ Светоматериал</a>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="products/facade.html">Продукты</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="process.html">Как мы работаем</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" style="padding-top:0;">
+        <div class="container">
+            <h1>Свет как <span>материал</span></h1>
+            <p>Архитектура, оживающая в темноте</p>
+            <a href="contacts.html" class="btn-gold">Обсудить проект</a>
+        </div>
+        <div class="scroll-down">⌄</div>
+    </section>
+
+    <!-- ABOUT SHORT -->
+    <section class="bg-dark-light">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2 class="section-title" style="text-align:left;">Мы превращаем статичные формы в <span>живую среду</span></h2>
+                    <p style="margin-bottom:20px; font-size:18px; line-height:1.9;">Не подсветка, а архитектурная материя. Мы — команда инженеров, архитекторов и светодизайнеров. Интегрируем свет в материалы, создавая уникальные решения для фасадов, парков и интерьеров.</p>
+                    <a href="about.html" class="btn-outline">Подробнее</a>
+                </div>
+                <div style="background:#1a1a1a; height:350px; border-radius:15px; display:flex; align-items:center; justify-content:center; color:#666; border:1px solid rgba(230,184,0,0.1); font-size:18px;">
+                    🏢 Фото о компании
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Что мы <span>создаём</span></h2>
+            <p class="section-subtitle">Каждое решение уникально и создаётся под конкретный объект</p>
+            <div class="grid-5">
+                <div class="card">
+                    <div class="icon">🏛️</div>
+                    <h3>Фасадный барельеф</h3>
+                    <p>Интеграция света в архитектуру фасада</p>
+                    <a href="products/facade.html" class="link">Подробнее →</a>
+                </div>
+                <div class="card">
+                    <div class="icon">🗿</div>
+                    <h3>Парковая скульптура</h3>
+                    <p>Световые арт-объекты для парков</p>
+                    <a href="products/sculpture.html" class="link">Подробнее →</a>
+                </div>
+                <div class="card">
+                    <div class="icon">🏠</div>
+                    <h3>Световая беседка</h3>
+                    <p>Уютные световые решения для отдыха</p>
+                    <a href="products/gazebo.html" class="link">Подробнее →</a>
+                </div>
+                <div class="card">
+                    <div class="icon">✨</div>
+                    <h3>Световые дорожки</h3>
+                    <p>Световые решения для пешеходных зон</p>
+                    <a href="products/paths.html" class="link">Подробнее →</a>
+                </div>
+                <div class="card">
+                    <div class="icon">🖼️</div>
+                    <h3>Интерьерные панно</h3>
+                    <p>Свет в интерьере — уникальные решения</p>
+                    <a href="products/panels.html" class="link">Подробнее →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section class="bg-dark-light">
+        <div class="container">
+            <h2 class="section-title">Почему <span>выбирают нас</span></h2>
+            <div class="grid-4">
+                <div class="card">
+                    <div class="icon">🎯</div>
+                    <h3>Индивидуальный подход</h3>
+                    <p>Разрабатываем концепцию под каждый объект</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🏆</div>
+                    <h3>Опыт</h3>
+                    <p>Более 50 реализованных проектов</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📦</div>
+                    <h3>Полный цикл</h3>
+                    <p>От эскиза до монтажа под ключ</p>
+                </div>
+                <div class="card">
+                    <div class="icon">⚙️</div>
+                    <h3>Технология</h3>
+                    <p>Собственные материалы и инженерные решения</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:50px;">
+                <a href="about.html" class="btn-outline">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO CAROUSEL -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Наши <span>проекты</span></h2>
+            <p class="section-subtitle">Реализованные объекты, которые говорят сами за себя</p>
+
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <div class="icon">🏛️</div>
+                        <div>Фасад ТЦ "Галерея"</div>
+                        <div style="font-size:14px; color:#888;">Москва, 2025</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="icon">🌳</div>
+                        <div>Парк "Зарядье"</div>
+                        <div style="font-size:14px; color:#888;">Москва, 2025</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="icon">🏠</div>
+                        <div>Беседка в ЖК "Легенда"</div>
+                        <div style="font-size:14px; color:#888;">Санкт-Петербург, 2025</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="icon">✨</div>
+                        <div>Световые дорожки на набережной</div>
+                        <div style="font-size:14px; color:#888;">Сочи, 2025</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="icon">🖼️</div>
+                        <div>Интерьер ресторана "Небо"</div>
+                        <div style="font-size:14px; color:#888;">Казань, 2025</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="icon">🗿</div>
+                        <div>Парковая скульптура "Крылья"</div>
+                        <div style="font-size:14px; color:#888;">Екатеринбург, 2025</div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+                <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots"></div>
+
+            <div style="text-align:center; margin-top:40px;">
+                <a href="portfolio.html" class="btn-outline">Смотреть все проекты</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Увидеть будущий объект <span>уже сейчас</span></h2>
+            <p>Пришлите фото фасада, интерьера или план участка — мы подготовим бесплатную световую визуализацию</p>
+            <span class="note">✦ Без риска и обязательств ✦</span>
+            <a href="visualization.html" class="btn-gold">Получить визуализацию</a>
+        </div>
+    </section>
+<!-- ФУТЕР (горизонтальный, без соцсетей) -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4 style="color:#E6B800;">✦ Светоматериал</h4>
+                <p>Интеграция света в архитектуру.<br>Превращаем статичные формы в живую среду.</p>
+            </div>
+            <div>
+                <h4>Навигация</h4>
+                <a href="about.html">О нас</a>
+                <a href="products/facade.html">Продукты</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <a href="tel:+79101241230">📞 +7 (910) 124-12-30</a>
+                <a href="mailto:eli2009@yandex.ru">✉️ eli2009@yandex.ru</a>
+                <a href="https://t.me/tvelingram" target="_blank">📱 @tvelingram</a>
+                <span class="address">📍 Москва, ул. Архитектурная, 15</span>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Светоматериал. Все права защищены.</div>
+    </div>
+</footer>
+
+    <script>
+        // === HEADER SCROLL EFFECT ===
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // === CAROUSEL ===
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = track.children;
+        const totalSlides = slides.length;
+        const dotsContainer = document.getElementById('carouselDots');
+
+        // Создаём точки
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateCarousel() {
+            const width = slides[0].clientWidth;
+            track.style.transform = `translateX(-${currentSlide * width}px)`;
+
+            // Обновляем точки
+            const dots = dotsContainer.querySelectorAll('button');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        function moveSlide(direction) {
+            goToSlide(currentSlide + direction);
+        }
+
+        // Автопрокрутка
+        let autoSlide = setInterval(() => moveSlide(1), 4000);
+
+        // Останавливаем автопрокрутку при наведении
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => moveSlide(1), 4000);
+        });
+
+        // Пересчёт при ресайзе
+        window.addEventListener('resize', updateCarousel);
+
+        // === АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ ===
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(40px)';
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
