@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Светоматериал</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        .filter-btn {
+            padding: 10px 25px;
+            background: #1a1a1a;
+            color: #CCCCCC;
+            border: 1px solid rgba(230,184,0,0.2);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        .filter-btn:hover {
+            border-color: #E6B800;
+            color: #FFFFFF;
+        }
+        .filter-btn.active {
+            background: #E6B800;
+            color: #111111;
+            border-color: #E6B800;
+            font-weight: 600;
+        }
+        .portfolio-item {
+            position: relative;
+            cursor: pointer;
+            height: 280px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(230,184,0,0.08);
+            transition: 0.4s ease;
+        }
+        .portfolio-item:hover {
+            border-color: #E6B800;
+            transform: scale(1.03);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .portfolio-item .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 18px;
+            padding: 20px;
+            text-align: center;
+        }
+        .portfolio-item .content .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .portfolio-item .category-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(230,184,0,0.9);
+            color: #111;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .portfolio-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+            transform: translateY(100%);
+            transition: 0.4s ease;
+        }
+        .portfolio-item:hover .overlay {
+            transform: translateY(0);
+        }
+        .portfolio-item .overlay h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .portfolio-item .overlay p {
+            font-size: 14px;
+            color: #CCCCCC;
+        }
+        @media (max-width: 768px) {
+            .portfolio-item {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">✦ Светоматериал</a>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="products/facade.html">Продукты</a>
+                <a href="portfolio.html" class="active">Портфолио</a>
+                <a href="process.html">Как мы работаем</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <section style="padding-top:120px;">
+        <div class="container">
+            <h1 class="section-title">Наши <span>проекты</span></h1>
+            <p class="section-subtitle">Реализованные объекты, которые говорят сами за себя</p>
+
+            <!-- Фильтр -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="facades">Фасады</button>
+                <button class="filter-btn" data-filter="parks">Парки</button>
+                <button class="filter-btn" data-filter="gazebos">Беседки</button>
+                <button class="filter-btn" data-filter="paths">Дорожки</button>
+                <button class="filter-btn" data-filter="interiors">Интерьеры</button>
+            </div>
+
+            <!-- Сетка проектов -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="portfolio-item" data-category="facades">
+                    <div class="content"><div class="icon">🏛️</div>Фасад ТЦ "Галерея"</div>
+                    <div class="category-tag">Фасады</div>
+                    <div class="overlay"><h3>Фасад ТЦ "Галерея"</h3><p>Москва, 2025</p></div>
+                </div>
+                <div class="portfolio-item" data-category="parks">
+                    <div class="content"><div class="icon">🌳</div>Парк "Зарядье"</div>
+                    <div class="category-tag">Парки</div>
+                    <div class="overlay"><h3>Парк "Зарядье"</h3><p>Москва, 2025</p></div>
+                </div>
+                <div class="portfolio-item" data-category="gazebos">
+                    <div class="content"><div class="icon">🏠</div>Беседка в ЖК "Легенда"</div>
+                    <div class="category-tag">Беседки</div>
+                    <div class="overlay"><h3>Беседка в ЖК "Легенда"</h3><p>Санкт-Петербург, 2025</p></div>
+                </div>
+                <div class="portfolio-item" data-category="paths">
+                    <div class="content"><div class="icon">✨</div>Световые дорожки на набережной</div>
+                    <div class="category-tag">Дорожки</div>
+                    <div class="overlay"><h3>Световые дорожки</h3><p>Сочи, 2025</p></div>
+                </div>
+                <div class="portfolio-item" data-category="interiors">
+                    <div class="content"><div class="icon">🖼️</div>Интерьер ресторана "Небо"</div>
+                    <div class="category-tag">Интерьеры</div>
+                    <div class="overlay"><h3>Интерьер ресторана "Небо"</h3><p>Казань, 2025</p></div>
+                </div>
+                <div class="portfolio-item" data-category="parks">
+                    <div class="content"><div class="icon">🗿</div>Парковая скульптура "Крылья"</div>
+                    <div class="category-tag">Парки</div>
+                    <div class="overlay"><h3>Парковая скульптура "Крылья"</h3><p>Екатеринбург, 2025</p></div>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:50px;">
+                <a href="visualization.html" class="btn-gold">Хотите такой же проект?</a>
+            </div>
+        </div>
+    </section>
+
+<!-- ФУТЕР (горизонтальный, без соцсетей) -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4 style="color:#E6B800;">✦ Светоматериал</h4>
+                <p>Интеграция света в архитектуру.<br>Превращаем статичные формы в живую среду.</p>
+            </div>
+            <div>
+                <h4>Навигация</h4>
+                <a href="about.html">О нас</a>
+                <a href="products/facade.html">Продукты</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <a href="tel:+79101241230">📞 +7 (910) 124-12-30</a>
+                <a href="mailto:eli2009@yandex.ru">✉️ eli2009@yandex.ru</a>
+                <a href="https://t.me/tvelingram" target="_blank">📱 @tvelingram</a>
+                <span class="address">📍 Москва, ул. Архитектурная, 15</span>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Светоматериал. Все права защищены.</div>
+    </div>
+</footer>
+
+    <script>
+        // Header scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Фильтр портфолио
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.dataset.filter;
+                portfolioItems.forEach(item => {
+                    item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

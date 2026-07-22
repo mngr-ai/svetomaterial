@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как мы работаем | Светоматериал</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+        .step {
+            text-align: center;
+            padding: 35px 20px 30px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            border: 1px solid rgba(230,184,0,0.08);
+            transition: 0.4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .step:hover {
+            border-color: rgba(230,184,0,0.3);
+            transform: translateY(-5px);
+        }
+        .step .step-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #E6B800;
+            font-family: 'Montserrat', sans-serif;
+            opacity: 0.12;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .step .icon {
+            font-size: 52px;
+            margin-bottom: 18px;
+            display: block;
+            line-height: 1;
+        }
+        .step h3 {
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        .step p {
+            color: #CCCCCC;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 220px;
+            margin: 0 auto;
+        }
+        .principle-box {
+            background: rgba(230,184,0,0.05);
+            border: 1px solid rgba(230,184,0,0.2);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            max-width: 800px;
+            margin: 60px auto 40px;
+        }
+        .principle-box p {
+            font-size: 26px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: #E6B800;
+            line-height: 1.6;
+        }
+        .guarantee-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .guarantee-item {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(230,184,0,0.08);
+            transition: 0.3s;
+        }
+        .guarantee-item:hover {
+            border-color: rgba(230,184,0,0.3);
+        }
+        .guarantee-item .icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .guarantee-item h4 {
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+        }
+        .guarantee-item p {
+            color: #888;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 992px) {
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .step p {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 600px) {
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .guarantee-grid {
+                grid-template-columns: 1fr;
+            }
+            .principle-box p {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">✦ Светоматериал</a>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="products/facade.html">Продукты</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="process.html" class="active">Как мы работаем</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <section style="padding-top:120px; padding-bottom:60px;">
+        <div class="container">
+            <h1 class="section-title">Наш подход к <span>проекту</span></h1>
+
+            <!-- 4 шага (ровная сетка) -->
+            <div class="steps-grid">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <div class="icon">📸</div>
+                    <h3>Анализ</h3>
+                    <p>Вы присылаете фото или эскиз объекта</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <div class="icon">✏️</div>
+                    <h3>Концепция</h3>
+                    <p>Мы разрабатываем 2–3 варианта визуализации</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <div class="icon">📐</div>
+                    <h3>Проектирование</h3>
+                    <p>Подбираем рисунок, фактуру, свет</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">04</span>
+                    <div class="icon">✅</div>
+                    <h3>Реализация</h3>
+                    <p>Монтаж под ключ с гарантией качества</p>
+                </div>
+            </div>
+
+            <!-- Принцип -->
+            <div class="principle-box">
+                <p>«Свет должен быть вплетён в архитектуру, <br>а не наложен на неё сверху»</p>
+            </div>
+
+            <!-- Гарантии -->
+            <h2 class="section-title" style="font-size:32px; margin-top:40px;">Наши <span>гарантии</span></h2>
+            <div class="guarantee-grid">
+                <div class="guarantee-item">
+                    <div class="icon">📅</div>
+                    <h4>Соблюдение сроков</h4>
+                    <p>Мы выполняем работы точно в оговоренные сроки</p>
+                </div>
+                <div class="guarantee-item">
+                    <div class="icon">🛡️</div>
+                    <h4>Качество материалов</h4>
+                    <p>Используем только сертифицированные материалы</p>
+                </div>
+                <div class="guarantee-item">
+                    <div class="icon">🔧</div>
+                    <h4>Сервисное обслуживание</h4>
+                    <p>Гарантийное и постгарантийное обслуживание</p>
+                </div>
+            </div>
+
+            <!-- Кнопка -->
+            <div style="text-align:center; margin-top:40px;">
+                <a href="contacts.html" class="btn-gold">Начать проект</a>
+            </div>
+        </div>
+    </section>
+
+<!-- ФУТЕР (горизонтальный, без соцсетей) -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4 style="color:#E6B800;">✦ Светоматериал</h4>
+                <p>Интеграция света в архитектуру.<br>Превращаем статичные формы в живую среду.</p>
+            </div>
+            <div>
+                <h4>Навигация</h4>
+                <a href="about.html">О нас</a>
+                <a href="products/facade.html">Продукты</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <a href="tel:+79101241230">📞 +7 (910) 124-12-30</a>
+                <a href="mailto:eli2009@yandex.ru">✉️ eli2009@yandex.ru</a>
+                <a href="https://t.me/tvelingram" target="_blank">📱 @tvelingram</a>
+                <span class="address">📍 Москва, ул. Архитектурная, 15</span>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Светоматериал. Все права защищены.</div>
+    </div>
+</footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>
