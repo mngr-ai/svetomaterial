@@ -558,13 +558,13 @@ footer .footer-grid .address {
     footer .footer-grid .address {
         margin-top: 8px;
     }
-}/* Поддержка эмодзи */
-body {
+}
+/* === ПОДДЕРЖКА ЭМОДЗИ === */
+body, h1, h2, h3, p, a, div, span {
     font-family: 'Open Sans', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
 }
-
-/* Убедись, что эмодзи видны */
-.icon-emoji {
+.emoji {
     font-size: 24px;
+    line-height: 1.2;
     color: #FFFFFF;
 }
