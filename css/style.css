@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
     background: #111111;
     color: #CCCCCC;
     overflow-x: hidden;
@@ -558,4 +558,13 @@ footer .footer-grid .address {
     footer .footer-grid .address {
         margin-top: 8px;
     }
+}/* Поддержка эмодзи */
+body {
+    font-family: 'Open Sans', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+}
+
+/* Убедись, что эмодзи видны */
+.icon-emoji {
+    font-size: 24px;
+    color: #FFFFFF;
 }
