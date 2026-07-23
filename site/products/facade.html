@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фасадный барельеф | Светоматериал</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -22,26 +22,39 @@
         </div>
     </header>
 
-    <section style="padding-top:120px;" class="bg-dark-light">
-        <div class="container">
-            <h1 class="section-title">Фасадный барельеф</h1>
-            <p class="section-subtitle">Днём и ночью — создаём индивидуальное лицо здания</p>
+<!-- === БЛОК С ОПИСАНИЕМ И КАРТИНКОЙ === -->
+<section style="padding-top:120px;" class="bg-dark-light">
+    <div class="container">
+        <h1 class="section-title">Фасадный барельеф</h1>
+        <p class="section-subtitle">Днём и ночью — создаём индивидуальное лицо здания</p>
 
-            <div class="grid-2">
-                <div>
-                    <p style="font-size:18px; line-height:1.8; margin-bottom:20px;">
-                        Фасадный барельеф — это не просто декор, а полноценный архитектурный элемент, который преображает здание в любое время суток.
-                    </p>
-                    <p style="font-size:18px; line-height:1.8;">
-                        Мы создаём уникальные решения, которые делают фасад узнаваемым и привлекательным как днём, так и ночью.
-                    </p>
-                </div>
-                <div style="background:#1a1a1a; height:300px; border-radius:15px; display:flex; align-items:center; justify-content:center; color:#666; border:1px solid rgba(230,184,0,0.1);">
-                    🏛️ Фото фасада
-                </div>
+        <div class="grid-2">
+            <div>
+                <p style="font-size:18px; line-height:1.8; margin-bottom:20px;">
+                    Фасадный барельеф — это не просто декор, а полноценный архитектурный элемент, который преображает здание в любое время суток.
+                </p>
+                <p style="font-size:18px; line-height:1.8;">
+                    Мы создаём уникальные решения, которые делают фасад узнаваемым и привлекательным как днём, так и ночью.
+                </p>
+            </div>
+            <div class="facade-image-wrapper" style="height:450px; border-radius:15px; overflow:hidden; border:1px solid rgba(230,184,0,0.1); background:#1a1a1a; display:flex; align-items:center; justify-content:center; transition:0.4s ease; cursor:pointer;">
+                <img src="../images/prod.jpg" alt="Фасадный барельеф" style="width:100%; height:100%; object-fit:cover; transition:0.5s ease;">
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Стили (добавь в конец style.css или внутри <style> на странице) -->
+<style>
+    .facade-image-wrapper:hover {
+        border-color: #E6B800 !important;
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(230,184,0,0.3);
+    }
+    .facade-image-wrapper:hover img {
+        transform: scale(1.08);
+    }
+</style>
 
     <!-- Особенности -->
     <section>
@@ -72,18 +85,80 @@
         </div>
     </section>
 
-    <!-- Галерея -->
-    <section class="bg-dark-light">
-        <div class="container">
-            <h2 class="section-title">Галерея</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" style="height:200px; background:#1a1a1a; display:flex; align-items:center; justify-content:center; color:#666; border:1px solid rgba(230,184,0,0.1);">📸 Фото 1</div>
-                <div class="portfolio-item" style="height:200px; background:#1a1a1a; display:flex; align-items:center; justify-content:center; color:#666; border:1px solid rgba(230,184,0,0.1);">📸 Фото 2</div>
-                <div class="portfolio-item" style="height:200px; background:#1a1a1a; display:flex; align-items:center; justify-content:center; color:#666; border:1px solid rgba(230,184,0,0.1);">📸 Фото 3</div>
-                <div class="portfolio-item" style="height:200px; background:#1a1a1a; display:flex; align-items:center; justify-content:center; color:#666; border:1px solid rgba(230,184,0,0.1);">📸 Фото 4</div>
+
+
+<!-- === ГАЛЕРЕЯ "ДО" И "ПОСЛЕ" === -->
+<section class="bg-dark-light" style="padding:60px 0;">
+    <div class="container">
+        <h2 class="section-title">Наши работы <span>до и после</span></h2>
+        <p class="section-subtitle">Посмотрите, как мы преображаем объекты</p>
+
+        <!-- ДО -->
+        <div style="display:flex; align-items:center; gap:15px; margin-bottom:25px; justify-content:center;">
+            <div style="width:40px; height:3px; background:#E6B800; border-radius:2px;"></div>
+            <h3 style="color:#FFFFFF; font-family:'Montserrat',sans-serif; font-size:24px; margin:0; letter-spacing:2px;">🔴 ДО</h3>
+            <div style="width:40px; height:3px; background:#E6B800; border-radius:2px;"></div>
+        </div>
+        <div class="gallery-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-bottom:50px;">
+            <div class="gallery-item" style="height:320px; border-radius:15px; overflow:hidden; border:1px solid rgba(230,184,0,0.1); transition:0.4s ease; position:relative; cursor:pointer;">
+                <img src="../images/ph3.jpg" alt="ДО 1" style="width:100%; height:100%; object-fit:cover; transition:0.5s ease;">
+                <div style="position:absolute; bottom:15px; left:15px; background:rgba(0,0,0,0.7); padding:5px 18px; border-radius:20px; font-size:13px; color:#E6B800; font-weight:600;">ДО</div>
+            </div>
+            <div class="gallery-item" style="height:320px; border-radius:15px; overflow:hidden; border:1px solid rgba(230,184,0,0.1); transition:0.4s ease; position:relative; cursor:pointer;">
+                <img src="../images/fasaddo.jpg" alt="ДО 2" style="width:100%; height:100%; object-fit:cover; transition:0.5s ease;">
+                <div style="position:absolute; bottom:15px; left:15px; background:rgba(0,0,0,0.7); padding:5px 18px; border-radius:20px; font-size:13px; color:#E6B800; font-weight:600;">ДО</div>
             </div>
         </div>
-    </section>
+
+        <!-- ПОСЛЕ -->
+        <div style="display:flex; align-items:center; gap:15px; margin-bottom:25px; justify-content:center;">
+            <div style="width:40px; height:3px; background:#E6B800; border-radius:2px;"></div>
+            <h3 style="color:#E6B800; font-family:'Montserrat',sans-serif; font-size:24px; margin:0; letter-spacing:2px;">🟡 ПОСЛЕ</h3>
+            <div style="width:40px; height:3px; background:#E6B800; border-radius:2px;"></div>
+        </div>
+        <div class="gallery-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+            <div class="gallery-item" style="height:320px; border-radius:15px; overflow:hidden; border:1px solid rgba(230,184,0,0.1); transition:0.4s ease; position:relative; cursor:pointer;">
+                <img src="../images/ph32.jpg" alt="ПОСЛЕ 1" style="width:100%; height:100%; object-fit:cover; transition:0.5s ease;">
+                <div style="position:absolute; bottom:15px; left:15px; background:rgba(0,0,0,0.7); padding:5px 18px; border-radius:20px; font-size:13px; color:#E6B800; font-weight:600;">ПОСЛЕ</div>
+            </div>
+            <div class="gallery-item" style="height:320px; border-radius:15px; overflow:hidden; border:1px solid rgba(230,184,0,0.1); transition:0.4s ease; position:relative; cursor:pointer;">
+                <img src="../images/fasad.jpg" alt="ПОСЛЕ 2" style="width:100%; height:100%; object-fit:cover; transition:0.5s ease;">
+                <div style="position:absolute; bottom:15px; left:15px; background:rgba(0,0,0,0.7); padding:5px 18px; border-radius:20px; font-size:13px; color:#E6B800; font-weight:600;">ПОСЛЕ</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Стили с анимацией -->
+<style>
+    .gallery-item {
+        transition: 0.4s ease;
+    }
+    .gallery-item:hover {
+        border-color: #E6B800 !important;
+        transform: scale(1.04);
+        box-shadow: 0 12px 50px rgba(230,184,0,0.3);
+        z-index: 10;
+    }
+    .gallery-item:hover img {
+        transform: scale(1.08);
+    }
+
+    /* Мобильная версия */
+    @media (max-width: 768px) {
+        .gallery-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+        }
+        .gallery-item {
+            height: 220px !important;
+        }
+        .gallery-item div[style*="bottom:15px; left:15px;"] {
+            padding: 4px 14px !important;
+            font-size: 11px !important;
+        }
+    }
+</style>
 
     <!-- Призыв -->
     <section>
@@ -99,27 +174,27 @@
     <!-- ФУТЕР -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-grid" style="display:grid; grid-template-columns:2fr 1fr 2fr; gap:40px; padding:30px 0 20px;">
                 <div>
                     <h4 style="color:#E6B800;">✦ Светоматериал</h4>
-                    <p>Интеграция света в архитектуру.<br>Превращаем статичные формы в живую среду.</p>
+                    <p style="color:#888; font-size:14px; line-height:1.6; max-width:280px;">Интеграция света в архитектуру.<br>Превращаем статичные формы в живую среду.</p>
                 </div>
                 <div>
-                    <h4>Навигация</h4>
-                    <a href="../about.html">О нас</a>
-                    <a href="../products/index.html">Продукты</a>
-                    <a href="../portfolio.html">Портфолио</a>
-                    <a href="../contacts.html">Контакты</a>
+                    <h4 style="color:#FFFFFF; font-family:'Montserrat',sans-serif; font-size:18px; margin-bottom:15px;">Навигация</h4>
+                    <a href="../about.html" style="color:#888; text-decoration:none; font-size:14px; display:block; margin-bottom:8px; transition:0.3s;">О нас</a>
+                    <a href="../products/index.html" style="color:#888; text-decoration:none; font-size:14px; display:block; margin-bottom:8px; transition:0.3s;">Продукты</a>
+                    <a href="../portfolio.html" style="color:#888; text-decoration:none; font-size:14px; display:block; margin-bottom:8px; transition:0.3s;">Портфолио</a>
+                    <a href="../contacts.html" style="color:#888; text-decoration:none; font-size:14px; display:block; margin-bottom:8px; transition:0.3s;">Контакты</a>
                 </div>
                 <div>
-                    <h4>Контакты</h4>
-                    <a href="tel:+79101241230">📞 +7 (910) 124-12-30</a>
-                    <a href="mailto:eli2009@yandex.ru">✉️ eli2009@yandex.ru</a>
-                    <a href="https://t.me/tvelingram" target="_blank">📱 @tvelingram</a>
-                    <span class="address">📍 Москва, ул. Архитектурная, 15</span>
+                    <h4 style="color:#FFFFFF; font-family:'Montserrat',sans-serif; font-size:18px; margin-bottom:15px;">Контакты</h4>
+                    <a href="tel:+79101241230" style="color:#888; text-decoration:none; font-size:14px; display:block; margin-bottom:8px; transition:0.3s;">📞 +7 (910) 124-12-30</a>
+                    <a href="mailto:eli2009@yandex.ru" style="color:#888; text-decoration:none; font-size:14px; display:block; margin-bottom:8px; transition:0.3s;">✉️ eli2009@yandex.ru</a>
+                    <a href="https://t.me/tvelingram" target="_blank" style="color:#888; text-decoration:none; font-size:14px; display:block; margin-bottom:8px; transition:0.3s;">📱 @tvelingram</a>
+                    <span style="color:#666; font-size:14px; display:block; margin-top:8px;">📍 Москва, ул. Архитектурная, 15</span>
                 </div>
             </div>
-            <div class="footer-bottom">© 2026 Светоматериал. Все права защищены.</div>
+            <div style="text-align:center; padding-top:20px; border-top:1px solid rgba(230,184,0,0.05); font-size:14px; color:#555;">© 2026 Светоматериал. Все права защищены.</div>
         </div>
     </footer>
 

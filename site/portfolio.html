@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио | Светоматериал</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
+        /* Фильтр */
         .filter-buttons {
             display: flex;
             flex-wrap: wrap;
@@ -48,21 +49,10 @@
             transform: scale(1.03);
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
-        .portfolio-item .content {
+        .portfolio-item img {
             width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 18px;
-            padding: 20px;
-            text-align: center;
-        }
-        .portfolio-item .content .icon {
-            font-size: 48px;
-            margin-bottom: 10px;
+            object-fit: cover;
         }
         .portfolio-item .category-tag {
             position: absolute;
@@ -113,7 +103,7 @@
             <nav>
                 <a href="index.html">Главная</a>
                 <a href="about.html">О нас</a>
-                <a href="products/facade.html">Продукты</a>
+                <a href="products/index.html">Продукты</a>
                 <a href="portfolio.html" class="active">Портфолио</a>
                 <a href="process.html">Как мы работаем</a>
                 <a href="contacts.html">Контакты</a>
@@ -124,50 +114,100 @@
     <section style="padding-top:120px;">
         <div class="container">
             <h1 class="section-title">Наши <span>проекты</span></h1>
-            <p class="section-subtitle">Реализованные объекты, которые говорят сами за себя</p>
+            <p class="section-subtitle">Реализованные объекты для частных домов, дач и коттеджей</p>
 
             <!-- Фильтр -->
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">Все</button>
-                <button class="filter-btn" data-filter="facades">Фасады</button>
-                <button class="filter-btn" data-filter="parks">Парки</button>
+                <button class="filter-btn" data-filter="gardens">Сады</button>
+                <button class="filter-btn" data-filter="terraces">Террасы</button>
                 <button class="filter-btn" data-filter="gazebos">Беседки</button>
+                <button class="filter-btn" data-filter="facades">Фасады</button>
                 <button class="filter-btn" data-filter="paths">Дорожки</button>
                 <button class="filter-btn" data-filter="interiors">Интерьеры</button>
             </div>
 
             <!-- Сетка проектов -->
             <div class="portfolio-grid" id="portfolioGrid">
-                <div class="portfolio-item" data-category="facades">
-                    <div class="content"><div class="icon">🏛️</div>Фасад ТЦ "Галерея"</div>
-                    <div class="category-tag">Фасады</div>
-                    <div class="overlay"><h3>Фасад ТЦ "Галерея"</h3><p>Москва, 2025</p></div>
+                
+                <!-- 1. Свет в саду -->
+                <div class="portfolio-item" data-category="gardens">
+                    <img src="images/royal.jpeg" alt="Премиальный рояль">
+                    <div class="category-tag">Интерьер</div>
+                    <div class="overlay">
+                        <h3>Премиальный рояль</h3>
+                        <p>Подмосковье, 2025</p>
+                    </div>
                 </div>
-                <div class="portfolio-item" data-category="parks">
-                    <div class="content"><div class="icon">🌳</div>Парк "Зарядье"</div>
-                    <div class="category-tag">Парки</div>
-                    <div class="overlay"><h3>Парк "Зарядье"</h3><p>Москва, 2025</p></div>
+
+                <!-- 2. Терраса с огнями -->
+                <div class="portfolio-item" data-category="terraces">
+                    <img src="images/terrasa.PNG" alt="Терраса с огнями">
+                    <div class="category-tag">Террасы</div>
+                    <div class="overlay">
+                        <h3>Терраса с огнями</h3>
+                        <p>Ленинградская область, 2026</p>
+                    </div>
                 </div>
+
+                <!-- 3. Дачный уют -->
                 <div class="portfolio-item" data-category="gazebos">
-                    <div class="content"><div class="icon">🏠</div>Беседка в ЖК "Легенда"</div>
+                    <img src="images/besedka.PNG" alt="Дачный уют">
                     <div class="category-tag">Беседки</div>
-                    <div class="overlay"><h3>Беседка в ЖК "Легенда"</h3><p>Санкт-Петербург, 2025</p></div>
+                    <div class="overlay">
+                        <h3>Дачный уют</h3>
+                        <p>Краснодарский край, 2025</p>
+                    </div>
                 </div>
+
+                <!-- 4. Фасадный свет -->
+                <div class="portfolio-item" data-category="facades">
+                    <img src="images/fassvet.jpg" alt="Фасадный свет">
+                    <div class="category-tag">Фасады</div>
+                    <div class="overlay">
+                        <h3>Фасадный свет</h3>
+                        <p>Московская область, 2026</p>
+                    </div>
+                </div>
+
+                <!-- 5. Дорожка к дому -->
                 <div class="portfolio-item" data-category="paths">
-                    <div class="content"><div class="icon">✨</div>Световые дорожки на набережной</div>
+                    <img src="images/dorozhka.jpg" alt="Дорожка к дому">
                     <div class="category-tag">Дорожки</div>
-                    <div class="overlay"><h3>Световые дорожки</h3><p>Сочи, 2025</p></div>
+                    <div class="overlay">
+                        <h3>Дорожка к дому</h3>
+                        <p>Сочи, 2025</p>
+                    </div>
                 </div>
+
+                <!-- 6. Интерьерный свет -->
                 <div class="portfolio-item" data-category="interiors">
-                    <div class="content"><div class="icon">🖼️</div>Интерьер ресторана "Небо"</div>
-                    <div class="category-tag">Интерьеры</div>
-                    <div class="overlay"><h3>Интерьер ресторана "Небо"</h3><p>Казань, 2025</p></div>
+                    <img src="images/sculp.jpg" alt="Скульптурное освещение">
+                    <div class="category-tag">Сады</div>
+                    <div class="overlay">
+                        <h3>Скульптурное освещение</h3>
+                        <p>Казань, 2025</p>
+                    </div>
                 </div>
-                <div class="portfolio-item" data-category="parks">
-                    <div class="content"><div class="icon">🗿</div>Парковая скульптура "Крылья"</div>
-                    <div class="category-tag">Парки</div>
-                    <div class="overlay"><h3>Парковая скульптура "Крылья"</h3><p>Екатеринбург, 2025</p></div>
+
+                <div class="portfolio-item" data-category="interiors">
+                    <img src="images/ph4.jpeg" alt="Интерьер кухонного стола">
+                    <div class="category-tag">Интерьер</div>
+                    <div class="overlay">
+                        <h3>Интерьер кухонного стола</h3>
+                        <p>Владимир, 2026</p>
+                    </div>
                 </div>
+
+                                <div class="portfolio-item" data-category="interiors">
+                    <img src="images/volna.jpeg" alt="Объёмная стена">
+                    <div class="category-tag">Интерьер</div>
+                    <div class="overlay">
+                        <h3>Объёмная стена</h3>
+                        <p>Подмосковье, 2026</p>
+                    </div>
+                </div>
+
             </div>
 
             <div style="text-align:center; margin-top:50px;">
@@ -176,32 +216,32 @@
         </div>
     </section>
 
-<!-- ФУТЕР (горизонтальный, без соцсетей) -->
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <h4 style="color:#E6B800;">✦ Светоматериал</h4>
-                <p>Интеграция света в архитектуру.<br>Превращаем статичные формы в живую среду.</p>
+    <!-- ФУТЕР -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="color:#E6B800;">✦ Светоматериал</h4>
+                    <p>Интеграция света в архитектуру.<br>Превращаем статичные формы в живую среду.</p>
+                </div>
+                <div>
+                    <h4>Навигация</h4>
+                    <a href="about.html">О нас</a>
+                    <a href="products/index.html">Продукты</a>
+                    <a href="portfolio.html">Портфолио</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div>
+                    <h4>Контакты</h4>
+                    <a href="tel:+79101241230">📞 +7 (910) 124-12-30</a>
+                    <a href="mailto:eli2009@yandex.ru">✉️ eli2009@yandex.ru</a>
+                    <a href="https://t.me/tvelingram" target="_blank">📱 @tvelingram</a>
+                    <span class="address">📍 Москва, ул. Архитектурная, 15</span>
+                </div>
             </div>
-            <div>
-                <h4>Навигация</h4>
-                <a href="about.html">О нас</a>
-                <a href="products/facade.html">Продукты</a>
-                <a href="portfolio.html">Портфолио</a>
-                <a href="contacts.html">Контакты</a>
-            </div>
-            <div>
-                <h4>Контакты</h4>
-                <a href="tel:+79101241230">📞 +7 (910) 124-12-30</a>
-                <a href="mailto:eli2009@yandex.ru">✉️ eli2009@yandex.ru</a>
-                <a href="https://t.me/tvelingram" target="_blank">📱 @tvelingram</a>
-                <span class="address">📍 Москва, ул. Архитектурная, 15</span>
-            </div>
+            <div class="footer-bottom">© 2026 Светоматериал. Все права защищены.</div>
         </div>
-        <div class="footer-bottom">© 2026 Светоматериал. Все права защищены.</div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         // Header scroll
@@ -221,10 +261,15 @@
                 button.classList.add('active');
                 const filter = button.dataset.filter;
                 portfolioItems.forEach(item => {
-                    item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'block' : 'none';
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
                 });
             });
         });
     </script>
+
 </body>
 </html>
