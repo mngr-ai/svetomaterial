@@ -204,9 +204,27 @@
                     <p style="margin-bottom:20px; font-size:18px; line-height:1.9;">Не подсветка, а архитектурная материя. Мы — команда инженеров, архитекторов и светодизайнеров. Интегрируем свет в материалы, создавая уникальные решения для фасадов, парков и интерьеров.</p>
                     <a href="about.html" class="btn-outline">Подробнее</a>
                 </div>
-                <div style="background:#1a1a1a; height:350px; border-radius:15px; display:flex; align-items:center; justify-content:center; color:#666; border:1px solid rgba(230,184,0,0.1); font-size:18px;">
-                    🏢 Фото о компании
-                </div>
+<!-- === БЛОК "ФОТО О КОМПАНИИ" === -->
+<!-- ===== ФОТО КОМАНДЫ (УВЕЛИЧЕННОЕ) ===== -->
+<div style="height:450px; border-radius:15px; overflow:hidden; border:1px solid rgba(230,184,0,0.1); background:#1a1a1a; display:flex; align-items:center; justify-content:center; transition:0.4s ease; cursor:pointer;">
+    <img src="images/onas.jpeg" alt="Команда Светоматериал" style="width:100%; height:100%; object-fit:cover; transition:0.5s ease;">
+</div>
+<!-- ===== КОНЕЦ БЛОКА ===== -->
+
+<!-- Стили для анимации (добавь в конец файла style.css) -->
+<style>
+    .about-image-wrapper {
+        transition: 0.4s ease;
+    }
+    .about-image-wrapper:hover {
+        border-color: #E6B800 !important;
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(230,184,0,0.3);
+    }
+    .about-image-wrapper:hover img {
+        transform: scale(1.08);
+    }
+</style>
             </div>
         </div>
     </section>
@@ -223,7 +241,7 @@
                 <img src="images/fasad.jpg" alt="Фасадный барельеф" style="width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
                 <h3>Фасадный барельеф</h3>
                 <p>Интеграция света в архитектуру фасада</p>
-                <a href="products/facade.html" class="link">Подробнее →</a>
+               
             </div>
 
             <!-- 2. Парковая скульптура -->
@@ -231,7 +249,7 @@
                 <img src="images/park.jpeg" alt="Парковая скульптура" style="width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
                 <h3>Парковая скульптура</h3>
                 <p>Световые арт-объекты для парков</p>
-                <a href="products/sculpture.html" class="link">Подробнее →</a>
+              
             </div>
 
             <!-- 3. Световая беседка -->
@@ -239,7 +257,7 @@
                 <img src="images/besedka.PNG" alt="Световая беседка" style="width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
                 <h3>Световая беседка</h3>
                 <p>Уютные световые решения для отдыха</p>
-                <a href="products/gazebo.html" class="link">Подробнее →</a>
+                
             </div>
 
             <!-- 4. Световые дорожки -->
@@ -247,7 +265,7 @@
                 <img src="images/dorozhka.jpg" alt="Световые дорожки" style="width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
                 <h3>Световые дорожки</h3>
                 <p>Световые решения для пешеходных зон</p>
-                <a href="products/paths.html" class="link">Подробнее →</a>
+                
             </div>
 
             <!-- 5. Интерьерные панно -->
@@ -255,7 +273,7 @@
                 <img src="images/panno.jpeg" alt="Интерьерные панно" style="width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
                 <h3>Интерьерные панно</h3>
                 <p>Свет в интерьере — уникальные решения</p>
-                <a href="products/panels.html" class="link">Подробнее →</a>
+                
             </div>
 
         </div>
@@ -294,57 +312,92 @@
         </div>
     </section>
 
-    <!-- PORTFOLIO CAROUSEL -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">Наши <span>проекты</span></h2>
-            <p class="section-subtitle">Реализованные объекты, которые говорят сами за себя</p>
+<!-- ПОРТФОЛИО КАРУСЕЛЬ (БЕЗ СЖАТИЯ) -->
+<section style="padding:0; background:#111111;">
+    <div class="container" style="max-width:100%; padding:0;">
+        <h2 class="section-title" style="padding-top:40px;">Наши <span>проекты</span></h2>
+        <p class="section-subtitle">Реализованные объекты, которые мы создаем</p>
+        
+        <div class="carousel-container" style="position:relative; width:100%; overflow:hidden; margin-top:20px;">
+            <div class="carousel-track" id="carouselTrack" style="display:flex; transition:transform 0.6s ease;">
 
-            <div class="carousel-container">
-                <div class="carousel-track" id="carouselTrack">
-                    <div class="carousel-slide">
-                        <div class="icon">🏛️</div>
-                        <div>Фасад ТЦ "Галерея"</div>
-                        <div style="font-size:14px; color:#888;">Москва, 2025</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="icon">🌳</div>
-                        <div>Парк "Зарядье"</div>
-                        <div style="font-size:14px; color:#888;">Москва, 2025</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="icon">🏠</div>
-                        <div>Беседка в ЖК "Легенда"</div>
-                        <div style="font-size:14px; color:#888;">Санкт-Петербург, 2025</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="icon">✨</div>
-                        <div>Световые дорожки на набережной</div>
-                        <div style="font-size:14px; color:#888;">Сочи, 2025</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="icon">🖼️</div>
-                        <div>Интерьер ресторана "Небо"</div>
-                        <div style="font-size:14px; color:#888;">Казань, 2025</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="icon">🗿</div>
-                        <div>Парковая скульптура "Крылья"</div>
-                        <div style="font-size:14px; color:#888;">Екатеринбург, 2025</div>
+                <!-- Дачный уют -->
+                <div class="carousel-slide" style="min-width:100%; position:relative; height:80vh; background:#1a1a1a; display:flex; align-items:center; justify-content:center;">
+                    <img src="images/besedka.PNG" alt="Дачный уют" style="width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+                    <div style="position:absolute; bottom:60px; left:60px; background:rgba(0,0,0,0.75); padding:20px 40px; border-radius:12px; color:white; border-left:5px solid #E6B800; z-index:10;">
+                        <h3 style="font-size:36px; margin-bottom:8px; font-family:'Montserrat',sans-serif; font-weight:600; color:#fff;">Дачный уют</h3>
+                        <p style="font-size:18px; color:#CCCCCC; margin:0;">Краснодарский край, 2025</p>
                     </div>
                 </div>
 
-                <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
-                <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
+                <!-- Скульптурное освещение -->
+                <div class="carousel-slide" style="min-width:100%; position:relative; height:80vh; background:#1a1a1a; display:flex; align-items:center; justify-content:center;">
+                    <img src="images/sculp.jpg" alt="Скульптурное освещение" style="width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+                    <div style="position:absolute; bottom:60px; left:60px; background:rgba(0,0,0,0.75); padding:20px 40px; border-radius:12px; color:white; border-left:5px solid #E6B800; z-index:10;">
+                        <h3 style="font-size:36px; margin-bottom:8px; font-family:'Montserrat',sans-serif; font-weight:600; color:#fff;">Скульптурное освещение</h3>
+                        <p style="font-size:18px; color:#CCCCCC; margin:0;">Казань, 2025</p>
+                    </div>
+                </div>
+
+                <!-- Терраса с огнями -->
+                <div class="carousel-slide" style="min-width:100%; position:relative; height:80vh; background:#1a1a1a; display:flex; align-items:center; justify-content:center;">
+                    <img src="images/terrasa.PNG" alt="Терраса с огнями" style="width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+                    <div style="position:absolute; bottom:60px; left:60px; background:rgba(0,0,0,0.75); padding:20px 40px; border-radius:12px; color:white; border-left:5px solid #E6B800; z-index:10;">
+                        <h3 style="font-size:36px; margin-bottom:8px; font-family:'Montserrat',sans-serif; font-weight:600; color:#fff;">Терраса с огнями</h3>
+                        <p style="font-size:18px; color:#CCCCCC; margin:0;">Ленинградская область, 2025</p>
+                    </div>
+                </div>
+
+                <!-- Свет в прихожей -->
+                <div class="carousel-slide" style="min-width:100%; position:relative; height:80vh; background:#1a1a1a; display:flex; align-items:center; justify-content:center;">
+                    <img src="images/krylco.jpg" alt="Свет в прихожей" style="width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+                    <div style="position:absolute; bottom:60px; left:60px; background:rgba(0,0,0,0.75); padding:20px 40px; border-radius:12px; color:white; border-left:5px solid #E6B800; z-index:10;">
+                        <h3 style="font-size:36px; margin-bottom:8px; font-family:'Montserrat',sans-serif; font-weight:600; color:#fff;">Свет в прихожей</h3>
+                        <p style="font-size:18px; color:#CCCCCC; margin:0;">Новгородская область, 2026</p>
+                    </div>
+                </div>
+
+                <!-- Дорожка к дому -->
+                <div class="carousel-slide" style="min-width:100%; position:relative; height:80vh; background:#1a1a1a; display:flex; align-items:center; justify-content:center;">
+                    <img src="images/sochi.jpg" alt="Дорожка к дому" style="width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+                    <div style="position:absolute; bottom:60px; left:60px; background:rgba(0,0,0,0.75); padding:20px 40px; border-radius:12px; color:white; border-left:5px solid #E6B800; z-index:10;">
+                        <h3 style="font-size:36px; margin-bottom:8px; font-family:'Montserrat',sans-serif; font-weight:600; color:#fff;">Дорожка к дому</h3>
+                        <p style="font-size:18px; color:#CCCCCC; margin:0;">Сочи, 2025</p>
+                    </div>
+                </div>
+
+                <!-- Фасадный свет -->
+                <div class="carousel-slide" style="min-width:100%; position:relative; height:80vh; background:#1a1a1a; display:flex; align-items:center; justify-content:center;">
+                    <img src="images/ph1.jpg" alt="Фасадный свет" style="width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+                    <div style="position:absolute; bottom:60px; left:60px; background:rgba(0,0,0,0.75); padding:20px 40px; border-radius:12px; color:white; border-left:5px solid #E6B800; z-index:10;">
+                        <h3 style="font-size:36px; margin-bottom:8px; font-family:'Montserrat',sans-serif; font-weight:600; color:#fff;">Фасадный свет</h3>
+                        <p style="font-size:18px; color:#CCCCCC; margin:0;">Московская область, 2025</p>
+                    </div>
+                </div>
+
+                <!-- Декор сада -->
+                <div class="carousel-slide" style="min-width:100%; position:relative; height:80vh; background:#1a1a1a; display:flex; align-items:center; justify-content:center;">
+                    <img src="images/ph3.jpg" alt="Декор сада" style="width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+                    <div style="position:absolute; bottom:60px; left:60px; background:rgba(0,0,0,0.75); padding:20px 40px; border-radius:12px; color:white; border-left:5px solid #E6B800; z-index:10;">
+                        <h3 style="font-size:36px; margin-bottom:8px; font-family:'Montserrat',sans-serif; font-weight:600; color:#fff;">Декор сада</h3>
+                        <p style="font-size:18px; color:#CCCCCC; margin:0;">Тверская область, 2025</p>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="carousel-dots" id="carouselDots"></div>
-
-            <div style="text-align:center; margin-top:40px;">
-                <a href="portfolio.html" class="btn-outline">Смотреть все проекты</a>
-            </div>
+            <!-- Кнопки -->
+            <button class="carousel-btn prev" onclick="moveSlide(-1)" style="position:absolute; top:50%; left:20px; transform:translateY(-50%); background:rgba(0,0,0,0.6); color:white; border:none; font-size:40px; padding:15px 25px; cursor:pointer; border-radius:10px; z-index:20; transition:0.3s;">‹</button>
+            <button class="carousel-btn next" onclick="moveSlide(1)" style="position:absolute; top:50%; right:20px; transform:translateY(-50%); background:rgba(0,0,0,0.6); color:white; border:none; font-size:40px; padding:15px 25px; cursor:pointer; border-radius:10px; z-index:20; transition:0.3s;">›</button>
         </div>
-    </section>
+
+        <div class="carousel-dots" id="carouselDots" style="display:flex; justify-content:center; gap:12px; margin-top:25px;"></div>
+        
+        <div style="text-align:center; padding:30px 0 50px;">
+            <a href="portfolio.html" class="btn-outline">Смотреть все проекты</a>
+        </div>
+    </div>
+</section>
 
     <!-- CTA -->
     <section class="cta">
