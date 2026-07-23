@@ -600,3 +600,399 @@ strong, b {
 nav a, .btn-gold, .btn-outline, .logo {
     font-weight: 700 !important;
 }
+/* ===== ПОДКЛЮЧЕНИЕ ШРИФТОВ ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #111111;
+    color: #CCCCCC;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700 !important;
+    color: #FFFFFF;
+}
+strong, b {
+    font-weight: 700 !important;
+}
+nav a, .btn-gold, .btn-outline, .logo {
+    font-weight: 700 !important;
+}
+
+/* ===== КОНТЕЙНЕР ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: 0.4s ease;
+    background: transparent;
+}
+header.scrolled {
+    background: rgba(17,17,17,0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(230,184,0,0.1);
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 26px;
+    color: #E6B800;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.logo:hover {
+    transform: scale(1.05);
+}
+nav a {
+    color: #CCCCCC;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+    font-size: 14px;
+    position: relative;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #E6B800;
+    transition: 0.3s;
+}
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+nav a:hover,
+nav a.active {
+    color: #E6B800;
+}
+
+/* ===== КНОПКИ ===== */
+.btn-gold {
+    display: inline-block;
+    background: linear-gradient(135deg, #E6B800, #c9a300);
+    color: #111111;
+    padding: 16px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.4s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 20px rgba(230,184,0,0.3);
+}
+.btn-gold:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(230,184,0,0.5);
+}
+.btn-outline {
+    display: inline-block;
+    border: 2px solid #E6B800;
+    color: #E6B800;
+    padding: 16px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.4s ease;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-outline:hover {
+    background: #E6B800;
+    color: #111111;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(230,184,0,0.3);
+}
+
+/* ===== СЕКЦИИ ===== */
+section {
+    padding: 100px 0;
+}
+.section-title {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.section-title span {
+    color: #E6B800;
+}
+.section-subtitle {
+    text-align: center;
+    color: #CCCCCC;
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+.bg-dark-light {
+    background: #1a1a1a;
+}
+
+/* ===== СЕТКИ ===== */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+/* ===== КАРТОЧКИ ===== */
+.card {
+    background: #1a1a1a;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(230,184,0,0.08);
+    transition: 0.4s ease;
+}
+.card:hover {
+    border-color: rgba(230,184,0,0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.card .icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.card p {
+    font-size: 15px;
+    color: #CCCCCC;
+}
+.card .link {
+    color: #E6B800;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* ===== ПОРТФОЛИО ===== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.portfolio-item {
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(230,184,0,0.08);
+    transition: 0.4s ease;
+    position: relative;
+    cursor: pointer;
+}
+.portfolio-item:hover {
+    border-color: #E6B800;
+    transform: scale(1.03);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portfolio-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
+    transform: translateY(100%);
+    transition: 0.4s ease;
+}
+.portfolio-item:hover .overlay {
+    transform: translateY(0);
+}
+.portfolio-item .overlay h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.portfolio-item .overlay p {
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
+/* ===== CTA ===== */
+.cta {
+    background: linear-gradient(135deg, rgba(17,17,17,0.95), rgba(26,26,26,0.95));
+    text-align: center;
+    padding: 120px 0;
+}
+.cta h2 {
+    font-size: 42px;
+}
+.cta h2 span {
+    color: #E6B800;
+}
+.cta p {
+    color: #CCCCCC;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.cta .note {
+    color: #E6B800;
+    font-size: 16px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* ===== ФОРМЫ ===== */
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group label {
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: #1a1a1a;
+    border: 2px solid rgba(230,184,0,0.1);
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #E6B800;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ===== ФУТЕР ===== */
+footer {
+    background: #0a0a0a;
+    border-top: 1px solid rgba(230,184,0,0.05);
+    padding: 60px 0;
+}
+footer .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 40px;
+}
+footer .footer-grid h4 {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+footer .footer-grid p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+}
+footer .footer-grid a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+footer .footer-grid a:hover {
+    color: #E6B800;
+    transform: translateX(5px);
+}
+footer .footer-grid .address {
+    color: #666;
+    font-size: 14px;
+    display: block;
+    margin-top: 8px;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(230,184,0,0.05);
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 992px) {
+    .grid-2, .grid-4, .grid-5, .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .grid-2, .grid-4, .grid-5, .portfolio-grid, footer .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .section-title {
+        font-size: 30px;
+    }
+    .portfolio-item {
+        height: 200px;
+    }
+    .cta h2 {
+        font-size: 30px;
+    }
+    nav a {
+        margin-left: 15px;
+        font-size: 12px;
+    }
+    header .container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+@media (max-width: 480px) {
+    nav a {
+        margin: 0 8px;
+        font-size: 11px;
+    }
+    .btn-gold, .btn-outline {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
