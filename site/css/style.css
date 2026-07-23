@@ -1,3 +1,7 @@
+/* ===== ПОДКЛЮЧЕНИЕ ШРИФТОВ (САМОЕ ПЕРВОЕ!) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* ===== ОБЩИЕ СТИЛИ ===== */
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +13,11 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
     background: #111111;
     color: #CCCCCC;
     overflow-x: hidden;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&family=Open+Sans:wght@300;400;600&display=swap');
 
 .container {
     max-width: 1200px;
@@ -23,7 +25,7 @@ body {
     padding: 0 20px;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
     position: fixed;
     top: 0;
@@ -83,7 +85,7 @@ nav a.active {
     color: #E6B800;
 }
 
-/* BUTTONS */
+/* ===== КНОПКИ ===== */
 .btn-gold {
     display: inline-block;
     background: linear-gradient(135deg, #E6B800, #c9a300);
@@ -128,7 +130,7 @@ nav a.active {
     transform: scale(0.95);
 }
 
-/* SECTIONS */
+/* ===== СЕКЦИИ ===== */
 section {
     padding: 100px 0;
     opacity: 0;
@@ -171,7 +173,7 @@ section.visible {
     background: #1a1a1a;
 }
 
-/* GRID */
+/* ===== СЕТКИ ===== */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -189,7 +191,7 @@ section.visible {
     gap: 25px;
 }
 
-/* CARDS */
+/* ===== КАРТОЧКИ ===== */
 .card {
     background: #1a1a1a;
     padding: 35px 25px;
@@ -254,7 +256,7 @@ section.visible {
     transform: translateX(5px);
 }
 
-/* PORTFOLIO / CAROUSEL */
+/* ===== ПОРТФОЛИО ===== */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -309,7 +311,7 @@ section.visible {
     color: #CCCCCC;
 }
 
-/* CTA */
+/* ===== ПРИЗЫВ ===== */
 .cta {
     background: linear-gradient(135deg, rgba(17,17,17,0.95), rgba(26,26,26,0.95));
     text-align: center;
@@ -355,7 +357,7 @@ section.visible {
     position: relative;
 }
 
-/* FORMS */
+/* ===== ФОРМЫ ===== */
 .form-group {
     margin-bottom: 25px;
 }
@@ -390,113 +392,12 @@ section.visible {
     min-height: 120px;
 }
 
-/* FOOTER */
+/* ===== ФУТЕР ===== */
 footer {
     background: #0a0a0a;
     border-top: 1px solid rgba(230,184,0,0.05);
     padding: 60px 0;
 }
-footer .grid-4 {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-}
-footer h4 {
-    color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    margin-bottom: 18px;
-}
-footer a {
-    color: #888;
-    text-decoration: none;
-    font-size: 14px;
-    display: block;
-    margin-bottom: 10px;
-    transition: 0.3s;
-}
-footer a:hover {
-    color: #E6B800;
-    transform: translateX(5px);
-}
-.footer-bottom {
-    text-align: center;
-    margin-top: 50px;
-    padding-top: 25px;
-    border-top: 1px solid rgba(230,184,0,0.05);
-    font-size: 14px;
-    color: #555;
-}
-
-/* TRUST BADGES */
-.trust-badge {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-.trust-badge span {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #CCCCCC;
-    font-size: 15px;
-}
-.trust-badge .icon {
-    font-size: 22px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .grid-2, .grid-4, .grid-5, .portfolio-grid, footer .grid-4 {
-        grid-template-columns: 1fr 1fr;
-    }
-    .portfolio-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media (max-width: 768px) {
-    .grid-2, .grid-4, .grid-5, .portfolio-grid, footer .grid-4 {
-        grid-template-columns: 1fr;
-    }
-    .hero h1 {
-        font-size: 32px;
-    }
-    nav a {
-        margin-left: 15px;
-        font-size: 12px;
-    }
-    .section-title {
-        font-size: 30px;
-    }
-    .portfolio-item {
-        height: 200px;
-    }
-    .cta h2 {
-        font-size: 30px;
-    }
-    header .container {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .trust-badge {
-        gap: 15px;
-    }
-}
-@media (max-width: 480px) {
-    nav a {
-        margin: 0 8px;
-        font-size: 11px;
-    }
-    .btn-gold, .btn-outline {
-        padding: 12px 25px;
-        font-size: 14px;
-    }
-    .hero h1 {
-        font-size: 24px;
-    }
-}
-/* ФУТЕР (горизонтальный, ровный) */
 footer .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
@@ -541,10 +442,62 @@ footer .footer-grid .address {
     color: #555;
 }
 
+/* ===== ДОВЕРИТЕЛЬНЫЕ ЗНАЧКИ ===== */
+.trust-badge {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.trust-badge span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #CCCCCC;
+    font-size: 15px;
+}
+.trust-badge .icon {
+    font-size: 22px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 992px) {
+    .grid-2, .grid-4, .grid-5, .portfolio-grid, footer .grid-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media (max-width: 768px) {
-    footer .footer-grid {
+    .grid-2, .grid-4, .grid-5, .portfolio-grid, footer .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    nav a {
+        margin-left: 15px;
+        font-size: 12px;
+    }
+    .section-title {
+        font-size: 30px;
+    }
+    .portfolio-item {
+        height: 200px;
+    }
+    .cta h2 {
+        font-size: 30px;
+    }
+    header .container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .trust-badge {
+        gap: 15px;
+    }
+    footer .footer-grid {
         text-align: center;
     }
     footer .footer-grid p {
@@ -555,7 +508,95 @@ footer .footer-grid .address {
         display: inline-block;
         margin: 0 5px 8px;
     }
-    footer .footer-grid .address {
-        margin-top: 8px;
+}
+@media (max-width: 480px) {
+    nav a {
+        margin: 0 8px;
+        font-size: 11px;
     }
+    .btn-gold, .btn-outline {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    .hero h1 {
+        font-size: 24px;
+    }
+}
+
+/* ===== ПОДДЕРЖКА ЭМОДЗИ ===== */
+body, h1, h2, h3, p, a, div, span {
+    font-family: 'Open Sans', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+}
+.emoji {
+    font-size: 24px;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+/* ===== ЖИРНЫЙ ТЕКСТ ===== */
+strong, b {
+    font-weight: 700 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700 !important;
+}
+
+/* Для текста в карточках, контактах и других блоках */
+p strong,
+p b,
+li strong,
+li b,
+.contact-card strong,
+.contact-card b {
+    font-weight: 700 !important;
+}
+
+/* Для кнопок, чтобы они были жирными */
+.btn-gold, .btn-outline {
+    font-weight: 700 !important;
+}
+
+/* Для навигации */
+nav a {
+    font-weight: 600 !important;
+}
+
+/* Для подписей в портфолио */
+.portfolio-item .overlay h3 {
+    font-weight: 700 !important;
+}
+
+/* Для логотипа */
+.logo {
+    font-weight: 700 !important;
+}
+/* ===== ПРИНУДИТЕЛЬНАЯ ЖИРНОСТЬ ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700 !important;
+}
+strong, b {
+    font-weight: 700 !important;
+}
+nav a {
+    font-weight: 600 !important;
+}
+.btn-gold, .btn-outline {
+    font-weight: 700 !important;
+}
+.logo {
+    font-weight: 700 !important;
+}
+/* ===== СИСТЕМНЫЕ ШРИФТЫ (100% РАБОТАЮТ) ===== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 700 !important;
+}
+strong, b {
+    font-weight: 700 !important;
+}
+nav a, .btn-gold, .btn-outline, .logo {
+    font-weight: 700 !important;
 }
